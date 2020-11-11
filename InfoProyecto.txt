@@ -1,0 +1,15 @@
+http://127.0.0.1:8000/catalogo
+
+
+-- Github administrador--
+Usuario: diegoortiz21
+Contraseña: diegoortiz20
+
+
+
+--Administrador--
+Usuario: nicolas11ortiz
+Contraseña: Ortiz11.
+
+Usuario: diegoortiz21
+Contraseña: diegoortiz20

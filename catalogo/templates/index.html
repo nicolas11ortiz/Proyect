@@ -1,0 +1,249 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="logo_gda.png"/>
+	<meta charset="UTF-8">
+	<title>FLASH VIDEOJUEGOS</title>
+	
+
+      {% load static %}
+
+		<br> </br>
+		<div> <p>Bienvenido
+		<script>
+		var nombre;
+		nombre=prompt('Ingrese su nombre:','');
+		document.write(nombre)
+</script>  
+a nuestro sitio web Flash videojuegos</p> </div>
+	
+	<html lang="es">
+<head>
+</head>
+<body>
+<script>
+
+function makeArray(){for(i=0;i<makeArray.arguments.length;i++)this[i+1]=makeArray.arguments[i]}var months=new makeArray('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');var date=new Date();var day=date.getDate();var month=date.getMonth()+1;var yy=date.getYear();var year=(yy<1000)?yy+1900:yy;document.write("Hoy es "+day+ " de "+months[month]+" del "+year);
+</script>
+</body>
+</html>    
+	</header>
+
+	 <div class="container">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel1" data-slide-to="1"></li>
+        <li data-target="#carousel1" data-slide-to="2"></li>
+      </ol>
+      <!-- diapositivas -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+		<a href="#">
+          <img class="d-block w-100" src="{% static 'images/1.jpg'%}" alt="">
+            <div class="carousel-caption">
+              <h3>FIFA 21</h3>
+            </div>
+        </div>
+		</a>
+        <div class="carousel-item" >
+		<a href="#">
+            <img class="d-block w-100" src="{% static 'images/3.jpg'%}" alt="" >
+            <div class="carousel-caption">
+              <h3>2K 21</h3>
+            </div>
+        </div>
+		</a>
+        <div class="carousel-item">
+		<a href="#">
+            <img class="d-block w-100" src="{% static 'images/2.jpg'%}" alt="">
+            <div class="carousel-caption">
+              <h3>Super Mario 3D All Stars</h3>
+            </div>
+        </div>
+		</a>
+		 
+      </div>
+	  
+	  
+      <!-- botones de desplazamiento a izquierda y derecha -->      
+      <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel1" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
+    
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+
+                      
+         <div class="container">  
+
+    <h1>VIDEOJUEGOS</h1>
+    <div class="row"> 
+      <div class="col-md">        
+          <div class="card text-center">
+            <div class="card-body"> {% load static %} 
+			 <img src="{% static 'images/ps4.png' %}" style="width:260px; height:250px";alt="Playstation">
+              <a href="file:///C:/Users/Usuario/Desktop/proyecto/juegos_ps4.html" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>          
+      </div>
+
+      <div class="col-md">        
+          <div class="card text-center">
+            <div class="card-body">
+			 <img src="{% static 'images/nintendo.jpg' %}" style="width:260px; height:250px"; alt="Nintendo Switch">
+              <a href="file:///C:/Users/Usuario/Desktop/proyecto/juegos_nintendo.html" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>          
+      </div>
+      
+      <div class="col-md">        
+          <div class="card text-center">
+            <div class="card-body">
+ <img src="{% static 'images/xbox.jpg' %}" style="width:260px; height:250px"; alt="Xbox One">
+              <a href="file:///C:/Users/Usuario/Desktop/proyecto/juegos_xbox.html" class="btn btn-primary">Entrar</a>
+            </div>
+          </div>          
+      </div>      
+    </div>
+  </div>
+	
+	
+	 <div class="container">   
+	
+		<div class="preve">		
+	    <a href="file:///C:/Users/Usuario/Desktop/proyecto/preventa_juegos.html">
+				<div align="center"> <img src="{% static 'images/image.png' %}" alt="Preventa"; > </li>
+				</a>
+		</div>		
+			
+					
+		<main class="main">
+		
+			<div class="container">
+	
+			<br> </br>
+			 <h1> La nueva generación se aproxima PlayStation 5 Vs Xbox X:La batalla de las nuevas consolas	</h1>
+		<p>Está confirmado. En noviembre llegarán las consolas PlayStation 5 de Sony y la Xbox Series X de Microsoft, por lo que ambas consolas estarán peleando por un lugar dentro de las listas de compras navideñas.
+			Ya conocemos bastante sobre la PS5 y la nueva Xbox gracias a las revelaciones que ambas compañías han realizado a lo largo del año, y finalmente obtuvimos precio y fecha de lanzamiento para la Xbox Series X,
+			así como para su consola digital, la Xbox Series S. Sin embargo, Sony únicamente ha confirmado que su consola llegará en noviembre.</p>
+			<p>Ambas consolas presumieron un diseño renovado y totalmente opuesto, ya que la PS5 es predominantemente blanca, delgada y con curvas, diseño que el presidente ejecutivo de PlayStation de Sony, Jim Ryan,
+ describió como "audaz, atrevido y orientado al futuro". Por otro lado, la Xbox Series X es una torre negra cuadrada. Según Phil Spencer, vicepresidente de gaming y jefe de Xbox en Microsoft, el diseño tipo torre de la nueva Xbox 
+ refleja las funciones centrales de la consola que son velocidad y rendimiento</p>
+		
+    <div class="row">       
+      <div class="col-md">        
+          <div class="card text-center">
+            <div class="card-body"><a href="file:///C:/Users/Usuario/Desktop/proyecto/ps5.html">
+			  <img src="{% static 'images/ps5_logo.png' %}" style="width:420px; height:120px";alt="Playstation">
+            </a>
+            </div>
+          </div>          
+      </div>
+
+      <div class="col-md">        
+          <div class="card text-center">
+            <div class="card-body"><a href="file:///C:/Users/Usuario/Desktop/proyecto/xbox_x.html">
+			 <img src="{% static 'images/Xbox_Series_X_logo.png' %}" style="width:120px; height:120px"; alt="xbox">
+              </a>
+            </div>
+          </div>          
+      </div>
+ </div> </div>
+ </div> 
+ 
+ <!--codigo matrix-->
+ <br></br>
+<div align="center"> <html lang="es">
+<head>
+<style>
+.matrix {font-size:10px;text-align:center;width:10px;}
+</style>
+</head>
+<body>
+<script>
+var rows=11;var speed=10;var reveal=2;var effectalign="default"
+var w3c=document.getElementById&&!window.opera;;var ie45=document.all&&!window.opera;var ma_tab,matemp,ma_bod,ma_row,x,y,columns,ma_txt,ma_cho;var m_coch=new Array();var m_copo=new Array();window.onload=function(){if(!w3c&&!ie45)return
+var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;ma_txt=" "+ma_txt+" ";columns=ma_txt.length;if(w3c){while(matrix.childNodes.length)matrix.removeChild(matrix.childNodes[0]);ma_tab=document.createElement("table");ma_tab.setAttribute("border",0);ma_tab.setAttribute("align",effectalign);ma_tab.style.backgroundColor="#000000";ma_bod=document.createElement("tbody");for(x=0;x<rows;x++){ma_row=document.createElement("tr");for(y=0;y<columns;y++){matemp=document.createElement("td");matemp.setAttribute("id","Mx"+x+"y"+y);matemp.className="matrix";matemp.appendChild(document.createTextNode(String.fromCharCode(160)));ma_row.appendChild(matemp);}
+ma_bod.appendChild(ma_row);}
+ma_tab.appendChild(ma_bod);matrix.appendChild(ma_tab);}else{ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#000000">';for(var x=0;x<rows;x++){ma_tab+='<t'+'r>';for(var y=0;y<columns;y++){ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'">&nbsp;</'+'td>';}
+ma_tab+='</'+'tr>';}
+ma_tab+='</'+'table>';matrix.innerHTML=ma_tab;}
+ma_cho=ma_txt;for(x=0;x<columns;x++){ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));m_copo[x]=0;}
+ma_bod=setInterval("mytricks()",speed);}
+function mytricks(){x=0;for(y=0;y<columns;y++){x=x+(m_copo[y]==100);ma_row=m_copo[y]%100;if(ma_row&&m_copo[y]<100){if(ma_row<rows+1){if(w3c){matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);matemp.firstChild.nodeValue=m_coch[y];}
+else{matemp=document.all["Mx"+(ma_row-1)+"y"+y];matemp.innerHTML=m_coch[y];}
+matemp.style.color="#33ff66";matemp.style.fontWeight="bold";}
+if(ma_row>1&&ma_row<rows+2){matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];matemp.style.fontWeight="normal";matemp.style.color="#00ff00";}
+if(ma_row>2){matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];matemp.style.color="#009900";}
+if(ma_row<Math.floor(rows/2)+1)m_copo[y]++;else if(ma_row==Math.floor(rows/2)+1&&m_coch[y]==ma_txt.charAt(y))zoomer(y);else if(ma_row<rows+2)m_copo[y]++;else if(m_copo[y]<100)m_copo[y]=0;}
+else if(Math.random()>0.9&&m_copo[y]<100){m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));m_copo[y]++;}}
+if(x==columns)clearInterval(ma_bod);}
+function zoomer(ycol){var mtmp,mtem,ytmp;if(m_copo[ycol]==Math.floor(rows/2)+1){for(ytmp=0;ytmp<rows;ytmp++){if(w3c){mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);mtmp.firstChild.nodeValue=m_coch[ycol];}
+else{mtmp=document.all["Mx"+ytmp+"y"+ycol];mtmp.innerHTML=m_coch[ycol];}
+mtmp.style.color="#33ff66";mtmp.style.fontWeight="bold";}
+if(Math.random()<reveal){mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));ma_cho=ma_cho.substring(0,mtmp)+ma_cho.substring(mtmp+1,ma_cho.length);}
+if(Math.random()<reveal-1)ma_cho=ma_cho.substring(0,ma_cho.length-1);m_copo[ycol]+=199;setTimeout("zoomer("+ycol+")",speed);}
+else if(m_copo[ycol]>200){if(w3c){mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);}
+else{mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];}
+mtmp.style.fontWeight="normal";mtem.style.fontWeight="normal";setTimeout("zoomer("+ycol+")",speed);}
+else if(m_copo[ycol]==200)m_copo[ycol]=100+Math.floor(rows/2);if(m_copo[ycol]>100&&m_copo[ycol]<200){if(w3c){mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);mtmp.firstChild.nodeValue=String.fromCharCode(160);mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);mtem.firstChild.nodeValue=String.fromCharCode(160);}
+else{mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];mtmp.innerHTML=String.fromCharCode(160);mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];mtem.innerHTML=String.fromCharCode(160);}
+setTimeout("zoomer("+ycol+")",speed);}}
+</script>
+<div id="matrix">&nbsp; FLASH VIDEO JUEGOS &nbsp;</div></div>
+</body>
+</html>    
+
+ 
+
+	
+</body>
+
+</html>
+
+<h2>Informacion del contenido</h2>
+
+  <p> tiene los siguientes juegos registrados:</p>
+  <ul>
+    <li><strong>Juegos:</strong> {{ num_juegos }}</li>
+    <li><strong>Desarrolladoras:</strong> {{ num_Desarrolladora }}</li>
+  </ul>
+
+<!-- Copyright Section -->
+<section class="copyright py-4 text-center text-white">
+  <div class="container">
+    <h6>Copyright &copy; Flash VideoJuegos 2020</h6>
+  </div>
+</section>
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="/static/js/jqBootstrapValidation.js"></script>
+  <script src="/static/js/contact_me.js"></script>
+  <script src="/static/js/autocompletar.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/freelancer.min.js"></script>
+{% endblock %}

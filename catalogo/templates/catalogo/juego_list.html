@@ -1,0 +1,36 @@
+
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Juego List: </h1>
+
+    {% if juego_list %}
+
+        <ul>
+            {% for juego in juego_list %}
+            <li>
+                <a href="{{ juego.get_absolute_url }}"> {{ juego.title }} </a> ({{ juego.Plataforma }})
+               
+            </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <p>No hay juegos disponibles</p>
+
+    {% endif %}
+
+<h2>Informacion del contenido</h2>
+
+  <p> tiene los siguientes juegos registrados:</p>
+  <ul>
+    <li><strong>Juegos:</strong> {{ num_juegos }}</li>
+    <li><strong>Desarrolladoras:</strong> {{ num_Desarrolladora }}</li>
+  </ul>
+
+        </a>
+    </div> 
+
+    <br>
+     </br>
+{% endblock %}

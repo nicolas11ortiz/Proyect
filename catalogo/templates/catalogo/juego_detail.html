@@ -1,0 +1,48 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <header class="masthead">
+    <div class="container d-flex flex-column">
+<FONT COLOR="black"><h1 class="page-section-heading text-uppercase text-secondary mb-0" > {{juego.title}}</FONT>
+  
+          <!--===============================================================================================-->
+          {% if user.is_authenticated  %}{% if user.is_staff %}
+
+          <a class="btn btn-default" href="{% url 'juego_delete' pk=juego.pk %}">Eliminar    <span class="glyphicon glyphicon-trash"></span></a>
+          <!--=======aqui codigo=======-->
+        
+          {% else %}{% endif %}{% else %}{% endif %}
+          <!--===============================================================================================-->    
+  
+  </h1>
+    
+   
+    <div class="row">
+  
+      
+        <div class="col-md-4">
+          <br>
+          <FONT COLOR="black"><h2 class="descripcion text-secondary">Descripción</h2></FONT>
+          <br>
+          <br>
+          <FONT COLOR="black"><p  class="texto">{{juego.summary}}</p> </FONT>
+          <br>
+          <FONT COLOR="black"><h2 class="descripcion text-secondary">Plataforma</h2></FONT>
+          <br>
+          <FONT COLOR="black"><p class="texto">{{juego.Plataforma}} </p></FONT>
+          <FONT COLOR="black"><h2 class="descripcion text-secondary">Desarrolladora</h2></FONT>
+          <br>
+          <FONT COLOR="black"><p class="texto">{{juego.Desarrolladora}} </p></FONT>
+           <FONT COLOR="black"><h2 class="descripcion text-secondary">Genero</h2></FONT>
+          <FONT COLOR="black"><p><strong></strong> {% for genre in juego.genre.all %} {{ genre }}{% if not forloop.last %}, {% endif %}{% endfor %}</p></FONT>
+          
+        </div>
+
+<div class="container">   
+  {% load static %} 
+    <div class="preve">   
+      <a href="file:///C:/Users/Usuario/Desktop/proyecto/preventa_juegos.html">
+        <div align="center"> <img src="{% static 'images/image.png' %}" alt="Preventa"; > </li>
+        </a>
+    </div>  
+{% endblock %}

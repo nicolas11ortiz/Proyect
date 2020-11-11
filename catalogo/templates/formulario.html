@@ -1,0 +1,105 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="logo_gda.png"/>
+	<meta charset="UTF-8">
+	<title>FLASH VIDEOJUEGOS</title>
+	
+
+      {% load static %}
+</head>
+
+
+<div align="center"><input type="button" value="Ocultar Item"
+		id="boton1">
+		<ul id="lista1">
+
+	 <li>	<div align="center"><h1>REGISTRO</h1> </div></li>
+			<form action="send_form_to_server" method="post" enctype="application/x-www-form-urlencoded">
+			
+				<div align="center"> <fieldset><legend>DATOS PERSONALES</legend> </div>
+				<div><h1>Formulario de registro</h1>
+				<p>Los campos marcados con un asterisco son obligatorios</p>
+			
+				 <label for="name">Nombre *</label> 
+					<input name="name" type="text" maxlength="30" id="name" required autofocus placeholder="Juan"/><br></br>
+				<label for="surname">Apellido Paterno *</label> 
+				 <input name="surname" type="text" maxlength="30" id="surname" required placeholder="Perez"/><br></br>
+					<label for="surname">Apellido Materno*</label> 
+					<input name="surname" type="text" maxlength="30" id="surname" required placeholder="Lopez"/><br></br>
+			<label for="email">Correo electrónico*</label>
+					<input name="email" type="email" maxlength="30" id="email" required placeholder="juanperez@gmail.com"/> <br></br>
+				 <label for="telefono">Telefono de contacto</label>
+					<input name="telefono" type="text" maxlength="8" id="telefono" placeholder="+569 XXXXXXXX" pattern="[0-9]{8}"/> <br></br>
+				<label for="birthday">Fecha de nacimiento</label>
+				<input name="birthday" type="date" id="birthday"/>
+				<p>Sexo:</li>
+					<input type="radio" name="hm" value="h"> Hombre</li>
+					<input type="radio" name="hm" value="m"> Mujer</li>
+					<input type="radio" name="hm" value="m"> Otro</li>
+				</p>		</li>
+			<label for="country">Region</label> 
+					<select name="region" id="region">
+						<option value="alb">REGION ARICA PARINACOTA</option>
+						<option value="and">REGION DE TARAPACA</option>
+						<option value="and">REGION DE ANTOFAGASTA</option>
+						<option value="and">REGION DE ATACAMA</option>
+						<option value="aus">REGION DE COQUIMBO</option>
+						<option value="sp">REGION DE VALPARAISO</option>
+						<option value="and">REGION RM </option>
+						<option value="and">REGION DE OHIGGINS</option>
+						<option value="aus">REGION DE MAULE</option>
+						<option value="sp">REGION DE ÑUBLE</option>
+						<option value="and">REGION BIO-BIO </option>
+						<option value="aus">REGION DE ARAUCANIA</option>
+						<option value="sp">REGION DE LOS RIOS</option>
+						<option value="and">REGION LOS LAGOS </option>
+						<option value="and">REGION AYSEN </option>
+						</select>
+						<br></br>
+				<label for="comuna">Comuna *</label> 
+					<input name="comuna" type="text" maxlength="40" id="comuna" required placeholder="TuComuna"/><br></br>
+				<label for="direccion">Direccion *</label> 
+					<input name="direccion" type="text" maxlength="80" id="direccion" required placeholder="TuDireccion"/><br></br>
+				
+			</fieldset>
+
+			<fieldset><legend>CREA TU CUENTA </legend>
+				<label for="nick">Nombre de usuario *</label>
+					<input type="text" name="nick" id="nick" required pattern="[a-z A-Z 0-9]{6,}" title="letras del alfabeto inglés y números, mínimo 6 caracteres"/><br></br>
+				<label for="psswd">Contraseña *</label>
+					<input type="password" name="password" id="psswd" required pattern="[a-zA-Z0-9-_.]{4,}" title="letras del alfabeto inglés, números, guión '-', subrayado '_', punto '.', mínimo 4 caracteres"/><br></br>
+				<label for="repeatpsswd">Repetir contraseña * </label>
+					<input type="password" name="repeat_password" id="repeatpsswd" required pattern="[a-zA-Z0-9-_.]{4,}" title="letras del alfabeto inglés, números, guión '-', subrayado '_', punto '.', mínimo 4 caracteres"/><br></br>
+			</fieldset>
+			
+			<fieldset><legend>NIVEL DE CALIFICACION DE LA PAGINA </legend>
+			<p>ingrese un numero si escoje 1 es malo y 5 es excelente</p>
+			
+			Escriba un número del 1 al 5:
+			<input type="number" name="numero" min="1"  max="5">
+			
+			</fieldset>
+			
+
+			<p><input type="submit" value="Crear cuenta"/>
+			   <input type="reset" value="Borrar">
+			</p>
+			
+		</ul>
+</div>
+</div>
+</div>
+
+	
+     
+				
+</body>
+
+</html>
+
+{% endblock %}
