@@ -4,10 +4,10 @@
  <header class="masthead">
     <div class="container d-flex flex-column">
 <FONT COLOR="black"><h1 class="page-section-heading text-uppercase text-secondary mb-0" > {{juego.title}}</FONT>
-  
+
           <!--===============================================================================================-->
           {% if user.is_authenticated  %}{% if user.is_staff %}
-
+           <a class="btn btn-default" href="{% url 'juego_update' pk=juego.pk %}">Editar    <span class="glyphicon glyphicon-pencil"></span></a>
           <a class="btn btn-default" href="{% url 'juego_delete' pk=juego.pk %}">Eliminar    <span class="glyphicon glyphicon-trash"></span></a>
           <!--=======aqui codigo=======-->
         

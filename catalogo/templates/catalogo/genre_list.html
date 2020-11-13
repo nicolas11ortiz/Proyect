@@ -63,14 +63,14 @@ tr:nth-child(even) {
         <table>
                 <tr>
                     <th>Nombre</th>
-                    <th>Descripción</th>
+                   
                 </tr>
 
                 {% for genre in genre_list %}
                     
                         <tr>
                             <td><a href="{{ genre.get_absolute_url }}"> {{ genre.name }} </a></td>
-                            <td>{{ genre.summary }}</td>
+                            
                         </tr>
                 
                     

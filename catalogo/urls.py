@@ -5,6 +5,7 @@ urlpatterns = [
 	path('',views.index,name='index'),
 	path('juego/', views.JuegoListView.as_view(), name='juego'),
     path('juego/<int:pk>', views.JuegoDetailView.as_view(), name='juego-detail'),
+    path('genres/', views.GenreListView.as_view(), name='genres'),
     path('contacto/', views.contacto, name='contacto'),
     path('formulario/', views.formulario, name='formulario'),
     path('genre/<int:pk>', views.GenreDetailView.as_view(), name='genre-detail'),
