@@ -40,4 +40,3 @@ def test_isbn_label(self):
         juego=juego.objects.get(id=1)
         max_length = juego._meta.get_field('isbn').max_length
         self.assertEquals(max_length,13)
-

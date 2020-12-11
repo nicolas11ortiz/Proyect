@@ -1,6 +1,17 @@
 from django.shortcuts import render
 from .models import Juego, Desarrolladora, Genre, Plataforma
-from django.views import generic
+from django.views import generic 
+from rest_framework import viewsets
+from .serializers import JuegoSerializer
+
+
+class JuegoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Juego.objects.all()
+    serializers_class = JuegoSerializer
+
 
 
 # Create your views here.
@@ -48,6 +59,10 @@ class JuegoListView(generic.ListView):
     paginate_by = 10
 class JuegoDetailView(generic.DetailView):
     model = Juego
+
+
+
+
 
 
     

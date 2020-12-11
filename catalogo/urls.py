@@ -1,15 +1,23 @@
-from django.urls import path 
-from . import views
+from django.urls import path, include
+from . import views 
+from django.contrib import admin
+from .views import JuegoViewSet
+from rest_framework import routers
 
-urlpatterns = [
-	path('',views.index,name='index'),
-	path('juego/', views.JuegoListView.as_view(), name='juego'),
+router = routers.DefaultRouter()
+router.register('Juegos', JuegoViewSet)
+
+urlpatterns = [ path('api/', include(router.urls)),
+]
+
+
+urlpatterns += [
+    path('',views.index,name='index'),
+    path('juego/', views.JuegoListView.as_view(), name='juego'),
     path('juego/<int:pk>', views.JuegoDetailView.as_view(), name='juego-detail'),
     path('genres/', views.GenreListView.as_view(), name='genres'),
     path('contacto/', views.contacto, name='contacto'),
-    path('formulario/', views.formulario, name='formulario'),
-    path('genre/<int:pk>', views.GenreDetailView.as_view(), name='genre-detail'),
-    path('juego/<str:pk>', views.JuegoDetailView.as_view(), name='juego-detail'),
+    path('formulario/', views.formulario, name='formulario'), 
     
 ]
 
@@ -20,4 +28,5 @@ urlpatterns += [
     path('juego/create/', views.juego_new,name='juego_create'),
     path('juego/<str:pk>/update/', views.juego_edit, name='juego_update'),
     path('juego/<str:pk>/delete/', views.JuegoDelete.as_view(), name='juego_delete'),
+    
 ]
