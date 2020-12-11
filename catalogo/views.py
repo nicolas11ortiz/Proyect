@@ -1,8 +1,15 @@
-from django.shortcuts import render
-from .models import Juego, Desarrolladora, Genre, Plataforma
+from django.shortcuts import render, redirect
+from .models import *
+from .forms import  JuegoForm, createUserForm
 from django.views import generic 
+from django.contrib.auth import authenticate, login, logout
+from .decorators import unauthenticated_user, allowed_users
+from django.contrib.auth.decorators import login_required
+
+
 from rest_framework import viewsets
 from .serializers import JuegoSerializer
+
 
 
 class JuegoViewSet(viewsets.ModelViewSet):
@@ -52,6 +59,16 @@ def formulario(request):
         request,
         'formulario.html',
     )
+
+def products(request, id):
+    Juegos = Juego.objects.filter(tipoJuego = id)
+    Desarrolladora = Desarrolladora.objects.get(pk = id)
+    return render(request, 'products.html', context)
+
+
+
+
+
 
 
 class JuegoListView(generic.ListView):
@@ -139,3 +156,6 @@ def juego_edit(request, pk):
     else:
         form = JuegoForm(instance=post)
     return render(request, 'catalogo/juego_form.html', {'form': form})
+
+
+ 
